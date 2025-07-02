@@ -48,13 +48,7 @@ router.get("/", (req, res) => {
       ],
     });
 
-    // Adding the number of products 
-    const categoriesWithCount = categories.map((category) => ({
-      ...category.toJSON(),
-      productsCount: category.Products.length,
-    }));
-
-    return categoriesWithCount;
+    return categories;
   });
 });
 ```
