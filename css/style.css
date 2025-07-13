@@ -36,9 +36,9 @@ header {
         margin-right: 15px;
     }
 
-    .info {
+    /* .info {
         width: 41%;
-    }
+    } */
 
     .full-name {
         font-size: 50px;
@@ -63,7 +63,7 @@ header {
     }
 
     .contact-info {
-        width: 30%;
+        /* width: 30%; */
         margin-left: 20px;
         margin-right: 20px;
         font-size: 15px;
@@ -107,7 +107,7 @@ main {
     }
 
     .code {
-        width: 50%;
+        width: 100%;
         margin-left: 20px;
         margin-right: 20px;
         font-size: 15px;
