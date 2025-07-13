@@ -1,1 +1,2 @@
-# rsschool-cv
+https://DaurenZh.github.io/rsschool-cv/
+https://DaurenZh.github.io/rsschool-cv/cv
