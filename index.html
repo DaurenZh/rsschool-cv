@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="img/avatar.jpg" alt="Dauren's photo" class="avatar">
+        <div class="info">
+            <span class="full-name">Dauren Zhylkybayev</span>
+            <p class="short-info">Aiming to be <b>ML, FullStack Developer</b></p>
+        </div>
+        <div class="separator"></div>
+        <div class="contact-info">
+            <p class="namings"><b>Contacts</b></p>
+            <p class="email">Email: <strong>zhylkybaevdauren@gmail.com</strong></p>
+            <p class="phone">Phone: <strong>+7-(700)-216-38-36</strong></p>
+            <p class="github">Github: <strong>DaurenZh</strong></p>
+            <p class="tg">Telegram: <strong>@drnwght</strong></p>
+            <p class="discord">Discord: <strong>dngnmstr</strong></p>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div class="separator"></div>
+        <div class="description">
+            <p><b>Goal:</b> Aim to develop my skills in <b>WebDev and ML areas.</b></p>
+            <p><b>Strengths:</b> Can work with tight deadlines, under pressure. Love to work on small features.
+                Often trying to be active and offer my ideas to the team. Interested in improving my soft and hard
+                skills.</p>
+            <p><b>Experience:</b> Worked as <b>Junior Developer</b> in outsourcing area. Faced interesting tasks,
+                fixed bugs, mostly created backend of projects fully from scratch.</p>
+        </div>
+        <div class="separator"></div>
+        <div class="skills">
+            <p class="namings"><b>Skills</b></p>
+            <ul class="list">
+                <li><strong>HTML/CSS(Fundamentals)</strong></li>
+                <li><strong>JavaScript(Fundamentals)</strong></li>
+                <li><strong>Python</strong></li>
+                <li><strong>Git</strong></li>
+                <li><strong>SQL</strong></li>
+                <li><strong>Docker(a bit)</strong></li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="code">
+            <p class="namings"><b>Code Examples</b></p>
+            <pre><code>
+            const { handleExpress } = require("../utils/handle-express");    
+            const router = require("express").Router();                      
+            const { authMiddleware } = require("./middlewares/auth");        
+                                                                             
+            router.use(authMiddleware);                                      
+                                                                             
+            // Get categories                                                
+            router.get("/", (req, res) => {                                  
+              handleExpress(res, async () => {                               
+                  const categories = await req.db.models.Category.findAll({  
+                    include: [                                               
+                      {                                                      
+                        model: req.db.models.Product,                        
+                        attributes: ["id"],                                  
+                      },                                                     
+                    ],                                                       
+                  });                                                        
+                                                                             
+                  return categories;                                         
+              });                                                            
+            });                                                              </code></pre>
+        </div>
+        <div class="exp">
+            <p class="namings"><b>Experience</b></p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Stack</th>
+                    <th>Period</th>
+                    <th>Projects</th>
+                </tr>
+                <tr>
+                    <td><em>Timal Consulting Group</em></td>
+                    <td><em><b>Junior Backend Developer</b></em></td>
+                    <td>NodeJS(Express), PostgreSQL, MySQL, SQLite, Swagger, Docker</td>
+                    <td>March 2024 - March 2025</td>
+                    <td>https://shop.plugins.smart-soft.kz/</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <div class="education">
+            <p class="namings"><b>Education</b></p>
+            <ul class="list">
+                <li><b>University:</b> <em>Kazakh-British Technical University, School of Information Technology and Engineering, Program: Computer Systems and Software.</em> 2023-2027</li>
+                <li>Other courses:
+                    <ul>
+                        <li>Udemy</li>
+                        <li>FreeCodeCamp</li>
+                        <li>Stepik</li>
+                        <li>CS50</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="big-separator"></div>
+        <div class="languages">
+            <p class="namings"><b>Languages</b></p>
+            <ul>
+                <li>English - Proficient (IELTS Overall Band Score: 7.0 - C1)</li>
+                <li>Russian - Proficient (C1)</li>
+                <li>Kazakh - Proficient (C1)</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
